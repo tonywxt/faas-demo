@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.22.177:31112
+functions:
+  lin-regress:
+    lang: python3
+    handler: ./lin-regress
+    image: harbor.bonc.space/openfaas/lin-regress:1.0
+    environment:
+      combine_output: false
+

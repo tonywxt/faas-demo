@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.22.177:31112
+functions:
+  get-data:
+    lang: python3
+    handler: ./get-data
+    image: harbor.bonc.space/openfaas/get-data:1.1
+    environment:
+      combine_output: false
+
